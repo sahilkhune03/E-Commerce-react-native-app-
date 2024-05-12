@@ -2,8 +2,8 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
-import LaptopScreen from './screens/LaptopScreen';
-import LaptopDetailScreen from './screens/LaptopDetailScreen';
+import ChocolateScreen from './screens/ChocolateScreen';
+import ChocolateDetailScreen from './screens/ChocolateDetailScreen';
 import CartScreen from './screens/CartScreen';
 // import Login from './screens/Login';
 // import Register from './screens/Register';
@@ -18,11 +18,11 @@ const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
 
-const LaptopStack = () => {
+const ChocolateStack = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Chocolate" component={LaptopScreen} />
-      <Stack.Screen name="ChocolateDetail" component={LaptopDetailScreen} />
+      <Stack.Screen name="Chocolate" component={ChocolateScreen} />
+      <Stack.Screen name="ChocolateDetail" component={ChocolateDetailScreen} />
       {/* <Stack.Screen name="Login" component={Login}/>
       <Stack.Screen name="register" component={Register} /> */}
     </Stack.Navigator>
@@ -34,7 +34,7 @@ function Tabs() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="chocolate" component={LaptopStack} options={{ headerShown: false,tabBarIcon: ({ color, size }) => <MaterialIcons name="laptop" size={24} color="black" />, }} />
+        <Tab.Screen name="chocolate" component={ChocolateStack} options={{ headerShown: false,tabBarIcon: ({ color, size }) => <MaterialIcons name="Chocolate" size={24} color="black" />, }} />
         <Tab.Screen
           name="Cart"
           component={CartScreen}

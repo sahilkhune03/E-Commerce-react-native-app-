@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image, Linking, ScrollView, TouchableOpacity } 
 import { Rating } from 'react-native-ratings';
 import { useCart } from '../context';
 
-const LaptopDetailScreen = ({ route }) => {
+const ChocolateDetailScreen = ({ route }) => {
   const { name, url, image, stars, total_reviews, price_string, asin } = route.params.item;
 
 
@@ -116,4 +116,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LaptopDetailScreen;
+export default ChocolateDetailScreen;

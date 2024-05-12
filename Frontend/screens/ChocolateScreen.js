@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
 import List from '../components/List';
 import axios from 'axios';
-import renderLaptops from '../components/renderLaptops';
+import renderChocolates from '../components/renderChocolates';
 
-const LaptopScreen = (props) => {
+const ChocolateScreen = (props) => {
 
 
   const [itemData, setItemData] = useState([])
@@ -34,8 +34,8 @@ const LaptopScreen = (props) => {
       setFilteredData(itemData)
     }
     else {
-      const filtered = itemData.filter(laptop =>
-        laptop.name.toLowerCase().includes(query.toLowerCase())
+      const filtered = itemData.filter(Chocolate =>
+        Chocolate.name.toLowerCase().includes(query.toLowerCase())
       );
       setFilteredData(filtered);
     }
@@ -50,7 +50,7 @@ const LaptopScreen = (props) => {
         value={searchQuery}
         onChangeText={handleSearch}
       />
-      <List data={filteredData} navigation={props.navigation} renderElement={renderLaptops} />
+      <List data={filteredData} navigation={props.navigation} renderElement={renderChocolates} />
     </View>
   );
 };
@@ -68,4 +68,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default LaptopScreen;
+export default ChocolateScreen;

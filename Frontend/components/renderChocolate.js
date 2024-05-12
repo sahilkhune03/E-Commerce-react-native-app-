@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
 
-const renderLaptops = ({item, props}) => {
+const renderChocolate = ({item, props}) => {
     const { navigation } = props
     const handlePress = () =>{
         navigation.navigate('ChocolateDetail', {item});
@@ -60,4 +60,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default renderLaptops;
+export default renderChocolate;
